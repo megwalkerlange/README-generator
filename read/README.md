@@ -1,49 +1,47 @@
-# ldsknf
+# README Generator
 
   ##Table of Contents
    
-  1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Languages](#languages)
-  4.[Usage](#usage)
+  1. [Description]
+  2. [Installation]
+  3. [Languages]
+  4. [Usage]
+  5. [Contributors]
+  6. [License]
+  8. [GitHub]
+  9. [Email]
+  10. [Questions]
 
   ## Description
 
-  kjfn
+  A simple app to create a professional README template
 
   ## Installation
 
-  kjernf
+  N/A
 
   ## Languages
 
-  dlfkjn
+  JavaScript, Node, Inquirer(NPM)
 
   ## Usage
 
-  kjfn
+  For developers who wish to quickly generate README files/templates
 
   ## Contributers
 
-  ejrn
+  N/A
 
   ## License
 
   MIT
 
-  ## Name of Creator
 
-  eorkfn
 
-  ## GitHub
+## Questions
 
-  oern
+  Project Owner: Megan Walker-Lange
 
-  ## Email
-
-  eri
-
-  ## Questions
-
-  reip
-
+  Project GitHub: megwalkerlange
+  
+  Email: meg.w@email.com

@@ -10,7 +10,6 @@ function generateMarkdown(data) {
   4. [Usage]
   5. [Contributors]
   6. [License]
-  7. [Name of Creator]
   8. [GitHub]
   9. [Email]
   10. [Questions]
@@ -39,22 +38,15 @@ function generateMarkdown(data) {
 
   ${data.license}
 
-  ## Name of Creator
 
-  ${data.name}
 
-  ## GitHub
+## Questions
 
-  ${data.github}
+  Project Owner: ${data.name}
 
-  ## Email
-
-  ${data.email}
-
-  ## Questions
-
-  ${data.questions}
-
+  Project GitHub: ${data.github}
+  
+  Email: ${data.email}
 `;
 }
 

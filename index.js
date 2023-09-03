@@ -52,11 +52,6 @@ const questions = [
     message: "Please list your github username",
   },
   { name: "email", message: "Please list your email address" },
-  {
-    name: "questions",
-    message:
-      "Please use this section to outline any FAQS/how to contact if the user has questions",
-  },
 ];
 
 function writeToFile(fileName, data) {
