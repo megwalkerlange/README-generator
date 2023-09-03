@@ -1,0 +1,3 @@
+# ignoring package.json files
+
+node_modules
