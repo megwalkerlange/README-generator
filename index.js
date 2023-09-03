@@ -1,16 +1,12 @@
 const fs = require(`fs`);
 const path = require("path");
 const inquirer = require(`inquirer`);
-// const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
   {
-    name: "userName",
-    message: "What is your username?",
-  },
-  {
-    name: "email",
-    message: "what is your email address?",
+    name: "title",
+    message: "What is the title of your project?",
   },
   {
     name: "description",
@@ -20,6 +16,19 @@ const questions = [
     name: "installation",
     message:
       "Please can you provide information on how to install your application?",
+  },
+  {
+    name: "languages",
+    messages:
+      "Please can yuo list all languages/technologies used within this project",
+  },
+  {
+    name: "usage",
+    message: "Please can you describe the intended usage for this project?",
+  },
+  {
+    name: "contributors",
+    message: "Please list anyone who contributed to this project",
   },
   {
     type: "list",
@@ -34,17 +43,31 @@ const questions = [
       "Eclipse Public License 2.0",
     ],
   },
+  {
+    name: "name",
+    message: "Please list your full name",
+  },
+  {
+    name: "github",
+    message: "Please list your github username",
+  },
+  { name: "email", message: "Please list your email address" },
+  {
+    name: "questions",
+    message:
+      "Please use this section to outline any FAQS/how to contact if the user has questions",
+  },
 ];
-inquirer.prompt(questions).then((answers) => {
-  data = console.info(
-    "Answer:",
-    answers.userName,
-    answers.email,
-    answers.description,
-    answers.license
-  );
-});
 
-// function writeToFile(generateMarkdown, data) {}
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
-// const text = inquirer.prompt;
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    console.log("Creating README.md File...");
+    writeToFile("./read/README.md", generateMarkdown({ ...answers }));
+  });
+}
+
+init();
